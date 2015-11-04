@@ -1,6 +1,3 @@
-{
-  "extends": [
-    "./classic.js",
-    "./node.js"
-  ]
-}
+extends:
+  - metalab/legacy
+  - metalab/rules/node

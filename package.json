@@ -7,6 +7,7 @@
     "eslint",
     "eslint-config"
   ],
+  "main": "react.js",
   "repository": "izaakschroeder/eslint-config-metalab",
   "scripts": {
     "lint": "./node_modules/.bin/eslint --ignore-path .gitignore .",

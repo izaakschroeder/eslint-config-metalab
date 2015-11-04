@@ -4,19 +4,17 @@ Lint JavaScript MetaLab style.
 
 ## Usage
 
+The default preset contains all of our lint rules configured for ES2015 and React.
+
 ```sh
 npm install --save-dev eslint eslint-config-metalab
 ```
 
 Just add the following to your `.eslintrc`:
 
-```json
-{
-  "extends": [
-    "metalab/standard",
-    "metalab/react"
-  ]
-}
+```yaml
+extends:
+  - metalab
 ```
 
 And run:
@@ -25,29 +23,37 @@ And run:
 eslint --ignore-path .gitignore
 ```
 
-It's recommended you use some combination of the rule packages:
+## Available Presets
 
- * `classic` - Old ES5/non-babel code.
+ * `legacy` - Old ES5/non-babel code.
  * `node` - If you're targeting the `node` platform.
  * `react` - If you're using the `react` framework.
- * `standard` - If you're using ES6/modern code.
+ * `base` - If you're using ES6/modern code.
 
-If you need more fine-grained control you can import things in the [rules/](rules) directory.
+```yaml
+extends:
+  - metalab/legacy
+```
+
+If you need even more fine-grained control you can import things in the [rules/](rules) directory.
+
+```yaml
+extends:
+  - metalab/rules/best-practices
+  - metalab/rules/style
+  - metalab/rules/babel
+  ...
+```
 
 ## Migrating
 
 So you've set everything up but you're getting hundreds of errors because your project followed some other conventions. Don't fret! You can disable the noisiest rules by simply temporarily blacklisting them:
 
-```json
-{
-  "extends": [
-    "metalab/standard",
-    "metalab/react"
-  ],
-  "rules": {
-    "noisy-rule": 0
-  }
-}
+```yaml
+extends:
+  - metalab
+  rules:
+    noisy-rule: 0
 ```
 
 Clean up the low hanging fruit and progressively iterate to bring beauty and inner peace to your project. :gem:

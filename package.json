@@ -17,15 +17,17 @@
     "babel-eslint": "^6.0.2"
   },
   "peerDependencies": {
-    "eslint": "^2.5.3",
+    "eslint": "^2.8.0",
     "eslint-plugin-filenames": "^0.2.0",
+    "eslint-plugin-immutable": "^1.0.0",
     "eslint-plugin-import": "^1.4.0",
-    "eslint-plugin-react": "^4.2.3"
+    "eslint-plugin-react": "^4.3.0"
   },
   "devDependencies": {
-    "eslint": "^2.5.3",
+    "eslint": "^2.8.0",
     "eslint-plugin-filenames": "^0.2.0",
+    "eslint-plugin-immutable": "^1.0.0",
     "eslint-plugin-import": "^1.4.0",
-    "eslint-plugin-react": "^4.2.3"
+    "eslint-plugin-react": "^4.3.0"
   }
 }

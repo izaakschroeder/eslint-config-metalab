@@ -9,6 +9,8 @@ module.exports = {
     // Enforce the idiomatic kebab-case instead of snake_case or PascalCase.
     // Also prevents cross-platform casing issues.
     // https://github.com/selaux/eslint-plugin-filenames
-    'filenames/filenames': [2, '^[a-z0-9.-]+$'],
+    'filenames/match-regex': [2, '^[a-z0-9.-]+$', true],
+    'filenames/match-exported': 2,
+    'filenames/no-index': 0,
   },
 };

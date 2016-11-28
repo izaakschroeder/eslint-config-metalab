@@ -54,10 +54,11 @@ module.exports = {
     // http://eslint.org/docs/rules/func-names
     'func-names': 0,
 
-    // Mostly here to ensure consistency and avoid scope-hoisting. Either way
-    // is viable however.
+    // Consistency is nice sometimes, but there are situations in which one
+    // might prefer one style over the other.
+    // TODO: Elaborate on when one would benefit from using either style.
     // http://eslint.org/docs/rules/func-style
-    'func-style': [2, 'expression'],
+    'func-style': 0,
 
     // Things look nice "{like: this}" and not "{like:this}".
     // http://eslint.org/docs/rules/key-spacing

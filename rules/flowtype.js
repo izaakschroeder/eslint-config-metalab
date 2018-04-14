@@ -10,7 +10,7 @@ module.exports = {
     'metalab/flowtype/boolean-style': [2, 'boolean'],
     'metalab/flowtype/define-flow-type': 1,
     'metalab/flowtype/delimiter-dangle': 0,
-    'metalab/flowtype/generic-spacing': [2, 'never'],
+    'metalab/flowtype/generic-spacing': 0,
     'metalab/flowtype/no-types-missing-file-annotation': 2,
     'metalab/flowtype/no-weak-types': 0,
     'metalab/flowtype/require-parameter-type': 0,

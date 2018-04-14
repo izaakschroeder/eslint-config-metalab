@@ -42,7 +42,7 @@ module.exports = {
 
     // Stateless components are generally preferable because they're easier
     // to reason about, simpler to write and (eventually) more performant.
-    'metalab/react/prefer-stateless-function': 2,
+    'metalab/react/prefer-stateless-function': 0,
 
     // This is turned off in favor of using `flowtype` to annotate stateless
     // function components. If your project is heavy on non-stateless components

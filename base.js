@@ -13,9 +13,16 @@ try {
   resolve.sync('flow-bin', {
     basedir: module.parent.paths[0],
   });
-  module.exports.extends.push(
-    require.resolve('./rules/flowtype')
-  );
+  module.exports.extends.push(require.resolve('./rules/flowtype'));
+} catch (err) {
+  //
+}
+
+try {
+  resolve.sync('prettier', {
+    basedir: module.parent.paths[0],
+  });
+  module.exports.extends.push(require.resolve('./rules/prettier'));
 } catch (err) {
   //
 }

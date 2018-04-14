@@ -1,5 +1,4 @@
 var hasBabel = require('../util/babel').hasBabel();
-var resolve = require('resolve');
 
 module.exports = {
   // For complete listing of rules and what they do, check out the docs.
@@ -36,9 +35,12 @@ module.exports = {
     // Dot notation is often preferred because it is easier to read, less
     // verbose, and works better with aggressive JavaScript minimizers.
     // http://eslint.org/docs/rules/dot-notation
-    'dot-notation': [2, {
-      allowKeywords: true,
-    }],
+    'dot-notation': [
+      2,
+      {
+        allowKeywords: true,
+      },
+    ],
 
     // JavaScript "types" to the rescue again! `==` offers incredibly
     // inconsistent checking resulting in hard-to-find errors.

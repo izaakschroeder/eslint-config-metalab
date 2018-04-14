@@ -1,5 +1,4 @@
 var hasBabel = require('../util/babel').hasBabel();
-var resolve = require('resolve');
 
 module.exports = {
   // For complete listing of rules and what they do, check out the docs.
@@ -20,9 +19,13 @@ module.exports = {
 
     // The one true brace style. (That's actually what it's called).
     // http://eslint.org/docs/rules/brace-style
-    'brace-style': [2, '1tbs', {
-      allowSingleLine: true,
-    }],
+    'brace-style': [
+      2,
+      '1tbs',
+      {
+        allowSingleLine: true,
+      },
+    ],
 
     // Single quotes are faster to type and seem to be a fairly general
     // convention in the JS community.
@@ -38,10 +41,13 @@ module.exports = {
 
     // Spacing around commas improve readability of a list of items.
     // http://eslint.org/docs/rules/comma-spacing
-    'comma-spacing': [2, {
-      before: false,
-      after: true,
-    }],
+    'comma-spacing': [
+      2,
+      {
+        before: false,
+        after: true,
+      },
+    ],
 
     // Using `first` just plain looks weird.
     // http://eslint.org/docs/rules/comma-style
@@ -65,10 +71,13 @@ module.exports = {
 
     // Things look nice "{like: this}" and not "{like:this}".
     // http://eslint.org/docs/rules/key-spacing
-    'key-spacing': [2, {
-      beforeColon: false,
-      afterColon: true,
-    }],
+    'key-spacing': [
+      2,
+      {
+        beforeColon: false,
+        afterColon: true,
+      },
+    ],
 
     // To be consistent with `array-bracket-spacing`.
     // http://eslint.org/docs/rules/object-curly-spacing
@@ -91,10 +100,13 @@ module.exports = {
     // not. We recommend following this pattern to more easily determine which
     // functions are to be used as constructors.
     // http://eslint.org/docs/rules/new-cap
-    'new-cap': [2, {
-      newIsCap: true,
-      capIsNew: false,
-    }],
+    'new-cap': [
+      2,
+      {
+        newIsCap: true,
+        capIsNew: false,
+      },
+    ],
 
     // Prevent pointlessly nested if statements because they're harder to read.
     // http://eslint.org/docs/rules/no-lonely-if
@@ -158,10 +170,13 @@ module.exports = {
     // Ensure consistency and improve readability. Don't allow silly things like
     // `for(var foo = 1;foo < 4;++i)`. Instead: `for(var foo = 1; foo < 4; ++i)`
     // http://eslint.org/docs/rules/semi-spacing
-    'semi-spacing': [2, {
-      before: false,
-      after: true,
-    }],
+    'semi-spacing': [
+      2,
+      {
+        before: false,
+        after: true,
+      },
+    ],
 
     // Enforce whitespace for visual clarity.
     // http://eslint.org/docs/rules/keyword-spacing
@@ -173,10 +188,13 @@ module.exports = {
 
     // Enforce whitespace for visual clarity.
     // http://eslint.org/docs/rules/space-before-function-paren
-    'space-before-function-paren': [2, {
-      anonymous: 'never',
-      named: 'never',
-    }],
+    'space-before-function-paren': [
+      2,
+      {
+        anonymous: 'never',
+        named: 'never',
+      },
+    ],
 
     // Enforce whitespace for visual clarity.
     // http://eslint.org/docs/rules/space-infix-ops

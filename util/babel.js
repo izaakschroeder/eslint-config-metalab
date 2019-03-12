@@ -17,6 +17,19 @@ exports.hasPrettier = function() {
   return false;
 };
 
+exports.hasTypescript = function() {
+  // Determine if we are using typescript or not.
+  try {
+    resolve.sync('typescript', {
+      basedir: basedir,
+    });
+    return true;
+  } catch (err) {
+    // If we can't load prettier then stop caring.
+  }
+  return false;
+};
+
 exports.hasBabel = function() {
   // Determine if we are using babel 7+ or not.
   try {
@@ -40,6 +53,7 @@ exports.hasBabel = function() {
 };
 
 exports.hasBabelResolver = function() {
+  var message;
   // Determine if we are using babel resolver or not.
   try {
     resolve.sync('babel-plugin-module-resolver', {
@@ -50,12 +64,13 @@ exports.hasBabelResolver = function() {
   } catch (err) {
     if (/SyntaxError/.test(err.toString())) {
       if (/v4/.test(process.version)) {
-        console.log( // eslint-disable-line no-console
-          chalk.red('error'),
+        message = [
           'babel-plugin-module-resolver does not work with node@4\n',
-          'See: ' +
-          'https://github.com/tleunen/babel-plugin-module-resolver/pull/222'
-        );
+          'See:',
+          'https://github.com/tleunen/babel-plugin-module-resolver/pull/222',
+        ].join(' ');
+        // eslint-disable-next-line no-console
+        console.log(chalk.red('error'), message);
         process.exit(1);
       }
     }

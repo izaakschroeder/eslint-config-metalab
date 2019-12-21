@@ -29,14 +29,14 @@
     "resolve": "^1.5.0"
   },
   "peerDependencies": {
-    "eslint": "^5.2.0"
+    "eslint": "^5.2.0 || ^6.0.0"
   },
   "devDependencies": {
     "@babel/core": "7.4.3",
     "@babel/plugin-syntax-flow": "7.2.0",
     "@babel/plugin-syntax-jsx": "7.2.0",
     "babel-plugin-module-resolver": "3.2.0",
-    "eslint": "5.16.0",
+    "eslint": "6.8.0",
     "flow-bin": "0.97.0",
     "prettier": "1.17.0",
     "react": "16.8.6"
